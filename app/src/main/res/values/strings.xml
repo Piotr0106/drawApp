@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DrawApp</string>
+    <string name="ranking">Rankingi</string>
+    <string name="draw">Moje losy</string>
+</resources>

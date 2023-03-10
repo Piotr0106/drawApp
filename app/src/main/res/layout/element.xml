@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="name"
+            type="pl.gda.wsb.drawapp.models.Name" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center_vertical">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/element_name"
+                    android:text="@{name.name}"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"/>
+            </TableRow>
+        </TableLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="end">
+
+            <TableRow>
+                <RadioGroup
+                    android:id="@+id/pots"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/pot_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Koszyk I"
+                        android:checked="true"/>
+                    <RadioButton
+                        android:id="@+id/pot_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Koszyk II"/>
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</layout>
