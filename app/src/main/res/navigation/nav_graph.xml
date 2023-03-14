@@ -6,6 +6,18 @@
 
     <fragment
         android:id="@+id/drawFragment"
-        android:name="pl.gda.wsb.drawapp.DrawFragment"
-        android:label="DrawFragment" />
+        android:name="pl.gda.wsb.drawapp.ui.draw.DrawFragment"
+        android:label="DrawFragment" >
+        <action
+            android:id="@+id/navigateToRanking"
+            app:destination="@id/rankingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rankingFragment"
+        android:name="pl.gda.wsb.drawapp.ui.ranking.RankingFragment"
+        android:label="RankingFragment">
+        <action
+            android:id="@+id/navigateToDraw"
+            app:destination="@id/drawFragment" />
+    </fragment>
 </navigation>

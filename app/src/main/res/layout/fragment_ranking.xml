@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.ranking.RankingFragment"
+        android:orientation="vertical">
+
+        <pl.gda.wsb.drawapp.tableview.SortableClubTableView
+            xmlns:table="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ranking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            table:tableView_columnCount="7" />
+
+    </RelativeLayout>
+</layout>

@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
-            type="pl.gda.wsb.drawapp.DrawViewModel" />
+            type="pl.gda.wsb.drawapp.ui.draw.DrawViewModel" />
     </data>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".DrawFragment">
+        tools:context=".ui.draw.DrawFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,7 +57,17 @@
             android:id="@+id/list_of_names"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp" />
+            android:layout_margin="8dp"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/counter"
+            android:text="@{viewModel.counter.toString()}"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginEnd="8dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/draw_button"
@@ -91,11 +94,12 @@
                 android:textSize="22sp" />
 
         </RelativeLayout>-->
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/drawn_names"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp" />
+            android:layout_margin="8dp"
+            android:paddingBottom="8dp"/>
     </LinearLayout>
-    </ScrollView>
 </layout>
