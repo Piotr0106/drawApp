@@ -1,4 +1,4 @@
-package pl.gda.wsb.drawapp
+package pl.gda.wsb.drawapp.ui.draw
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,17 +1,16 @@
-package pl.gda.wsb.drawapp
+package pl.gda.wsb.drawapp.ui.draw
 
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import pl.gda.wsb.drawapp.R
 import pl.gda.wsb.drawapp.databinding.FragmentDrawBinding
 import pl.gda.wsb.drawapp.models.Name
 
@@ -129,10 +128,6 @@ class DrawFragment : Fragment() {
             is DrawViewModel.Event.OnAddNameClick -> {
                 viewModel.list.observe(viewLifecycleOwner) { list ->
                     elementAdapter.notifyItemInserted(list.size)
-
-                    for (elem in list) {
-                        Log.i("names", "${elem.name}, ${elem.pot}")
-                    }
                 }
                 binding.editText.text = null
             }

@@ -32,7 +32,8 @@
         <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:gravity="end">
 
             <TableRow>
@@ -43,13 +44,13 @@
                         android:id="@+id/pot_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Koszyk I"
+                        android:text="I"
                         android:checked="true"/>
                     <RadioButton
                         android:id="@+id/pot_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Koszyk II"/>
+                        android:text="II"/>
                 </RadioGroup>
             </TableRow>
         </TableLayout>
